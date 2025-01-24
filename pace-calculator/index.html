@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pace Calculator</title>
+    <meta name="description" content="Calculate your pace for running, walking, or cycling with our easy-to-use Pace Calculator.">
+    <meta name="keywords" content="pace calculator, running pace, walking pace, cycling pace, calculate pace">
+    <meta name="author" content="Paxhl Tools">
+    <meta property="og:title" content="Pace Calculator">
+    <meta property="og:description" content="Easily calculate your pace per mile or kilometer for running, walking, or cycling.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calctools.paxhl.com/pace-calculator">
+    <meta property="og:image" content="https://calctools.paxhl.com/images/pace-calculator.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pace Calculator">
+    <meta name="twitter:description" content="Calculate your pace based on time and distance with our Pace Calculator.">
+    <meta name="twitter:image" content="https://calctools.paxhl.com/images/pace-calculator.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+         crossorigin="anonymous"></script>
+    <!-- Paxhl calc top -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2137593406454250"
+         data-ad-slot="1015382006"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <header>
+        <h1>Pace Calculator</h1>
+    </header>
+    <div class="container">
+        <h1>Calculate Your Pace</h1>
+
+        <label for="distance">Distance (miles or kilometers):</label>
+        <input type="number" id="distance" placeholder="Enter distance">
+
+        <label for="hours">Hours:</label>
+        <input type="number" id="hours" placeholder="0" min="0">
+
+        <label for="minutes">Minutes:</label>
+        <input type="number" id="minutes" placeholder="0" min="0" max="59">
+
+        <label for="seconds">Seconds:</label>
+        <input type="number" id="seconds" placeholder="0" min="0" max="59">
+
+        <button onclick="calculatePace()">Calculate Pace</button>
+
+        <div class="result" id="result">
+            Your pace will appear here.
+        </div>
+    </div>
+
+    <script>
+        function calculatePace() {
+            const distance = parseFloat(document.getElementById('distance').value);
+            const hours = parseInt(document.getElementById('hours').value) || 0;
+            const minutes = parseInt(document.getElementById('minutes').value) || 0;
+            const seconds = parseInt(document.getElementById('seconds').value) || 0;
+
+            if (isNaN(distance) || distance <= 0) {
+                document.getElementById('result').innerText = 'Please enter a valid distance.';
+                return;
+            }
+
+            const totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+            if (totalSeconds <= 0) {
+                document.getElementById('result').innerText = 'Please enter a valid time.';
+                return;
+            }
+
+            const paceSeconds = totalSeconds / distance;
+            const paceMinutes = Math.floor(paceSeconds / 60);
+            const paceRemainingSeconds = Math.round(paceSeconds % 60);
+
+            document.getElementById('result').innerText = `Your pace is ${paceMinutes} min ${paceRemainingSeconds} sec per unit.`;
+        }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+        crossorigin="anonymous"></script>
+        <!-- Paxhl calctools -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-2137593406454250"
+        data-ad-slot="8219084603"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>
