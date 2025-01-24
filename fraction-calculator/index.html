@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraction Calculator</title>
+    <meta name="description" content="Simplify, add, subtract, multiply, and divide fractions easily with our Fraction Calculator.">
+    <meta name="keywords" content="fraction calculator, simplify fractions, fraction operations, add fractions, subtract fractions, multiply fractions, divide fractions">
+    <meta name="author" content="Paxhl Tools">
+    <meta property="og:title" content="Fraction Calculator">
+    <meta property="og:description" content="Perform operations with fractions, including addition, subtraction, multiplication, and division, with our easy-to-use Fraction Calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calctools.paxhl.com/fraction-calculator">
+    <meta property="og:image" content="https://calctools.paxhl.com/images/fraction-calculator.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fraction Calculator">
+    <meta name="twitter:description" content="Easily calculate fraction operations with our simple Fraction Calculator. Perfect for math problems and everyday use.">
+    <meta name="twitter:image" content="https://calctools.paxhl.com/images/fraction-calculator.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+         crossorigin="anonymous"></script>
+    <!-- Paxhl calc top -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2137593406454250"
+         data-ad-slot="1015382006"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <header>
+        <h1>Fraction Calculator</h1>
+    </header>
+    <div class="container">
+        <h1>Calculate Fractions</h1>
+        <label for="fraction1">Fraction 1 (e.g., 3/4):</label>
+        <input type="text" id="fraction1" placeholder="Enter first fraction">
+
+        <label for="fraction2">Fraction 2 (e.g., 1/2):</label>
+        <input type="text" id="fraction2" placeholder="Enter second fraction">
+
+        <label for="operation">Operation:</label>
+        <select id="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+
+        <button onclick="calculateFraction()">Calculate</button>
+
+        <div class="result" id="result">
+            The result will appear here.
+        </div>
+    </div>
+
+    <script>
+        function calculateFraction() {
+            const fraction1 = document.getElementById('fraction1').value;
+            const fraction2 = document.getElementById('fraction2').value;
+            const operation = document.getElementById('operation').value;
+
+            function parseFraction(fraction) {
+                const [numerator, denominator] = fraction.split('/').map(Number);
+                if (isNaN(numerator) || isNaN(denominator) || denominator === 0) {
+                    throw new Error('Invalid fraction');
+                }
+                return { numerator, denominator };
+            }
+
+            function performOperation(frac1, frac2, op) {
+                let numerator, denominator;
+                switch (op) {
+                    case 'add':
+                        numerator = frac1.numerator * frac2.denominator + frac2.numerator * frac1.denominator;
+                        denominator = frac1.denominator * frac2.denominator;
+                        break;
+                    case 'subtract':
+                        numerator = frac1.numerator * frac2.denominator - frac2.numerator * frac1.denominator;
+                        denominator = frac1.denominator * frac2.denominator;
+                        break;
+                    case 'multiply':
+                        numerator = frac1.numerator * frac2.numerator;
+                        denominator = frac1.denominator * frac2.denominator;
+                        break;
+                    case 'divide':
+                        numerator = frac1.numerator * frac2.denominator;
+                        denominator = frac1.denominator * frac2.numerator;
+                        break;
+                    default:
+                        throw new Error('Invalid operation');
+                }
+                return { numerator, denominator };
+            }
+
+            function simplifyFraction(frac) {
+                function gcd(a, b) {
+                    return b === 0 ? a : gcd(b, a % b);
+                }
+                const gcdValue = gcd(frac.numerator, frac.denominator);
+                return {
+                    numerator: frac.numerator / gcdValue,
+                    denominator: frac.denominator / gcdValue
+                };
+            }
+
+            try {
+                const frac1 = parseFraction(fraction1);
+                const frac2 = parseFraction(fraction2);
+                const result = simplifyFraction(performOperation(frac1, frac2, operation));
+                document.getElementById('result').innerText = `Result: ${result.numerator}/${result.denominator}`;
+            } catch (error) {
+                document.getElementById('result').innerText = error.message;
+            }
+        }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+        crossorigin="anonymous"></script>
+        <!-- Paxhl calctools -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-2137593406454250"
+        data-ad-slot="8219084603"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <meta name="description" content="Calculate your exact age in years, months, and days with our easy-to-use Age Calculator.">
+    <meta name="keywords" content="age calculator, calculate age, birthday calculator, date of birth calculator">
+    <meta name="author" content="Paxhl Tools">
+    <meta property="og:title" content="Age Calculator">
+    <meta property="og:description" content="Find out your exact age in years, months, and days using our Age Calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calctools.paxhl.com/age-calculator">
+    <meta property="og:image" content="https://calctools.paxhl.com/images/age-calculator.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Age Calculator">
+    <meta name="twitter:description" content="Quickly calculate your age in years, months, and days with our Age Calculator.">
+    <meta name="twitter:image" content="https://calctools.paxhl.com/images/age-calculator.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+         crossorigin="anonymous"></script>
+    <!-- Paxhl calc top -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2137593406454250"
+         data-ad-slot="1015382006"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <header>
+        <h1>Age Calculator</h1>
+    </header>
+    <div class="container">
+        <h1>Calculate Your Age</h1>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+
+        <button onclick="calculateAge()">Calculate Age</button>
+
+        <div class="result" id="result">
+            Your age will appear here.
+        </div>
+    </div>
+
+    <script>
+        function calculateAge() {
+            const dob = new Date(document.getElementById('dob').value);
+            const today = new Date();
+
+            if (isNaN(dob)) {
+                document.getElementById('result').innerText = 'Please enter a valid date of birth.';
+                return;
+            }
+
+            let years = today.getFullYear() - dob.getFullYear();
+            let months = today.getMonth() - dob.getMonth();
+            let days = today.getDate() - dob.getDate();
+
+            if (days < 0) {
+                months--;
+                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            document.getElementById('result').innerText = `You are ${years} years, ${months} months, and ${days} days old.`;
+        }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+        crossorigin="anonymous"></script>
+        <!-- Paxhl calctools -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-2137593406454250"
+        data-ad-slot="8219084603"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

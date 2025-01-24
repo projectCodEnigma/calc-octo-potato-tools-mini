@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+    <meta name="description" content="Calculate your electricity bill based on usage and rates with our Electricity Bill Calculator.">
+    <meta name="keywords" content="electricity bill calculator, power consumption, calculate electricity bill">
+    <meta name="author" content="Paxhl Tools">
+    <meta property="og:title" content="Electricity Bill Calculator">
+    <meta property="og:description" content="Easily calculate your monthly electricity bill with our Electricity Bill Calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calctools.paxhl.com/electricity-bill-calculator">
+    <meta property="og:image" content="https://calctools.paxhl.com/images/electricity-bill-calculator.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Electricity Bill Calculator">
+    <meta name="twitter:description" content="Quickly calculate your electricity bill based on usage and rates.">
+    <meta name="twitter:image" content="https://calctools.paxhl.com/images/electricity-bill-calculator.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+         crossorigin="anonymous"></script>
+    <!-- Paxhl calc top -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2137593406454250"
+         data-ad-slot="1015382006"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <header>
+        <h1>Electricity Bill Calculator</h1>
+    </header>
+    <div class="container">
+        <h1>Calculate Your Electricity Bill</h1>
+        <label for="consumption">Electricity Consumption (kWh):</label>
+        <input type="number" id="consumption" placeholder="Enter total kWh consumed">
+
+        <label for="rate">Rate per kWh (in your currency):</label>
+        <input type="number" id="rate" placeholder="Enter rate per kWh">
+
+        <button onclick="calculateBill()">Calculate Bill</button>
+
+        <div class="result" id="result">
+            Your electricity bill will appear here.
+        </div>
+    </div>
+
+    <script>
+        function calculateBill() {
+            const consumption = parseFloat(document.getElementById('consumption').value);
+            const rate = parseFloat(document.getElementById('rate').value);
+
+            if (isNaN(consumption) || isNaN(rate) || consumption <= 0 || rate <= 0) {
+                document.getElementById('result').innerText = 'Please enter valid values for consumption and rate.';
+                return;
+            }
+
+            const bill = (consumption * rate).toFixed(2);
+            document.getElementById('result').innerText = `Your electricity bill is: ${bill}`;
+        }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+        crossorigin="anonymous"></script>
+        <!-- Paxhl calctools -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-2137593406454250"
+        data-ad-slot="8219084603"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

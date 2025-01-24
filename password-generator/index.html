@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <meta name="description" content="Generate strong and secure passwords with our Password Generator. Perfect for enhancing online security.">
+    <meta name="keywords" content="password generator, secure password, random password generator, strong password generator">
+    <meta name="author" content="Paxhl Tools">
+    <meta property="og:title" content="Password Generator">
+    <meta property="og:description" content="Quickly generate secure and random passwords to enhance your online safety.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calctools.paxhl.com/password-generator">
+    <meta property="og:image" content="https://calctools.paxhl.com/images/password-generator.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Password Generator">
+    <meta name="twitter:description" content="Create strong and unique passwords instantly with our Password Generator.">
+    <meta name="twitter:image" content="https://calctools.paxhl.com/images/password-generator.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+         crossorigin="anonymous"></script>
+    <!-- Paxhl calc top -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2137593406454250"
+         data-ad-slot="1015382006"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+    <header>
+        <h1>Stong Secured Password Generator</h1>
+    </header>
+    <div class="container">
+        <h1>Generate a Secure Password</h1>
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" placeholder="Enter password length" value="12">
+
+        <label>
+            <input type="checkbox" id="includeUppercase" checked>
+            Include Uppercase Letters
+        </label>
+        <label>
+            <input type="checkbox" id="includeNumbers" checked>
+            Include Numbers
+        </label>
+        <label>
+            <input type="checkbox" id="includeSymbols" checked>
+            Include Symbols
+        </label>
+
+        <label for="sets">Number of Passwords:</label>
+        <select id="sets">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <button onclick="generatePassword()">Generate Strong Secured Password</button>
+
+        <div class="result" id="result">
+            Your password(s) will appear here.
+        </div>
+    </div>
+
+    <script>
+        function generatePassword() {
+            const length = parseInt(document.getElementById('length').value);
+            const includeUppercase = document.getElementById('includeUppercase').checked;
+            const includeNumbers = document.getElementById('includeNumbers').checked;
+            const includeSymbols = document.getElementById('includeSymbols').checked;
+            const sets = parseInt(document.getElementById('sets').value);
+
+            if (isNaN(length) || length <= 0) {
+                document.getElementById('result').innerText = 'Please enter a valid password length.';
+                return;
+            }
+
+            const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+            const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const numberChars = '0123456789';
+            const symbolChars = '!@#$%^&*()_+[]{}|;:,.<>?';
+
+            let allChars = lowercaseChars;
+            if (includeUppercase) allChars += uppercaseChars;
+            if (includeNumbers) allChars += numberChars;
+            if (includeSymbols) allChars += symbolChars;
+
+            let passwords = '';
+            for (let j = 0; j < sets; j++) {
+                let password = '';
+                for (let i = 0; i < length; i++) {
+                    const randomIndex = Math.floor(Math.random() * allChars.length);
+                    password += allChars[randomIndex];
+                }
+                passwords += `Password ${j + 1}: ${password}\n`;
+            }
+
+            document.getElementById('result').innerText = passwords;
+        }
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2137593406454250"
+        crossorigin="anonymous"></script>
+        <!-- Paxhl calctools -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-2137593406454250"
+        data-ad-slot="8219084603"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</body>
+</html>

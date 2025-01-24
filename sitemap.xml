@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Calorie Calculator Page -->
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/calorie-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <!-- All Calculator Page -->
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/all-calculators</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- All Calculator Names Page -->
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/age-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/algebra-solver-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/bmi-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/body-fat-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/currency-converter</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/date-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/electricity-bill-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/fraction-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/heart-rate-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/investment-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/loan-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/mortgage-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/password-generator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/recipe-converter</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/savings-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/scientific-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/unit-converter</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://caloriecalculator.paxhl.com/water-intake-calculator</loc>
+        <lastmod>2024-12-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
