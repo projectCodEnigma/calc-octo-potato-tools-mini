@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://calctools.com/sitemap.xml
+
+# High-value pages
+Allow: /calculator/
+Allow: /categories/
+Allow: /calculators
+Allow: /about
+Allow: /submit-tool
+
+# Crawl delay (optional)
+Crawl-delay: 1
