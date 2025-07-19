@@ -89,10 +89,10 @@ const Home = () => {
                 Explore Tools
               </Link>
               <Link
-                to="/calculator/percentage-calculator"
+                to="/categories/finance"
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-all border-2 border-green-500 hover:border-green-600"
               >
-                Try Percentage Calculator
+                Try Finance Calculator
               </Link>
             </div>
           </div>
